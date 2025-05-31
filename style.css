@@ -53,17 +53,12 @@ color: #D6A04C;
 transition-duration: 0.5s;
 }
 
-#menu{display: inline-block;}
+/*--------vv Menu vv--------*/
 
 #men0{
     display: inline-block;
     height: 5px;
 }
-
-#check1{position:relative;
-top: 0;
-right: -45px;
-height: 100%;}
 
 #line1{
     background-color: white;
@@ -74,6 +69,7 @@ height: 100%;}
     position: absolute;
     top: 7%;
     margin-left: 40px;
+    z-index: 40;
 }
 
 #line2{
@@ -85,7 +81,60 @@ height: 100%;}
     position: absolute;
     margin-top: 1px;
     margin-left: 40px;
+    z-index: 40;
 }
+
+#menu{height: 3%;
+width: 5%;
+position: absolute;
+top: 6%;
+right: 14.5%;
+}
+
+#check1{position:absolute;
+top: 0;
+right: -45px;
+height: 100%;
+width: 100%;
+z-index: 50;
+opacity: 0%;}
+
+#check1:checked+aside{
+    position: fixed;
+    right: 0%;
+    z-index: 55;
+    transition: 1s;
+}
+
+
+aside{width: 335px;
+height: 932px;
+background-color: #111111;
+position: fixed;
+right: -335%;
+top: 0%;
+z-index: -2;
+padding: 140px 50px 10px 59px;
+    transition: 1s}
+
+#menu2{height: 3%;
+width: 5%;}
+
+#check2{display: inline-block;
+width: 100%;
+height: 100%;}
+
+#menu-list{list-style-type: none;
+    text-align: center;
+}
+
+#menu-list>li{margin-top: 15px;
+line-height: 1.5;}
+
+#menu-list>li>a{text-decoration: 0;
+color: #FFFFFF;
+font-size: 20px;
+font-family: "Questrial", sans-serif;}
 
 /*--------vv Reel vv--------*/
 .reel-box{
@@ -286,9 +335,23 @@ height: 80vh;
     text-align:left;
     display: inline-block;
     position: relative;
+
 }
 
-#commerc:hover{margin-top: 6%;}
+
+#slide1{color: #E9E3D9;
+    font-family: "Cabin", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-decoration: 0;
+    }
+
+#commerc:hover #com{
+position: relative;
+transition: 1s;}
+
+#commerc:hover #slide1{color: #D6A04C;
+transition: 1s;}
 
 #resid{
     margin-left: 1%;
@@ -296,24 +359,50 @@ height: 80vh;
     position: relative;
 }
 
+
+#resid:hover #res{
+position: relative;
+transition: 1s;}
+
+#resid:hover #slide2{color: #D6A04C;
+transition: 1s;}
+
+#slide2{color: #E9E3D9;
+    font-family: "Cabin", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-decoration: 0;
+    }
+
+
 #arch{
     margin-left: 1%;
     display: inline-block;
     position: relative;
 }
 
-.imgabout {padding-bottom: 7%;
+
+#arch:hover #arc{
+position: relative;
+transition: 1s;
+}
+
+#arch:hover #slide3{color: #D6A04C;
+transition: 1s;}
+
+#slide3{color: #E9E3D9;
+    font-family: "Cabin", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-decoration: 0;
+    }
+
+
+.imgwhat {padding-bottom: 7%;
 width: 405px;
+position: relative;
 }
 
-
-.slide{color: #E9E3D9;
-font-family: "Cabin", sans-serif;
-font-size: 32px;
-font-weight: 400;
-text-decoration: 0;
-
-}
 
 .arch{
     font-family: "Questrial",sans-serif;
@@ -330,8 +419,9 @@ text-decoration: 0;
 
 #projects{
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     background-color: #1e1e1e;
+    position: relative;
 }
 
 .project{margin-left: 15%;}
@@ -342,18 +432,49 @@ font-weight: 600;
 -webkit-text-stroke: 1px #E9E3D9;
 -webkit-text-fill-color: transparent;
 line-height: 1;
-margin: 0;
-z-index: 77;
+margin-left: 15%;
+padding-top: 5%;
+
 }
 
-#pr-img{z-index: 80;}
+#pr-img{z-index: 80;
+    position: relative;
+    top: -8%;
+    right: 0;
+}
 
-#pr-bigbox{background-color: #D6A04C;
+.row{height: 15vh;
+width: 50%;
+background-color: #D6A04C;
+margin-left: 14%;}
+
+#pr-bigbox{
 padding: 30px;
-width: 20%;
-height: 15vh;
-z-index: 81;
+width: 40%;
+height: 20vh;
+color: #FFFFFF;
+font-size: 20px;
+background-color: #D6A04C;
+z-index: 99;
+position: absolute;
+left: 15%;
+bottom: -10%;
 }
+
+#pr-h3{font-family: "Cabin",sans-serif;
+font-size: 32px;
+font-weight: 400;
+margin-bottom: 25px;
+width: 100%;
+padding-left: 5%;}
+
+#pr-p{padding-left: 5%;}
+
+#pr-bigbox:hover{background-color: #272727;
+    transition: 0.5s;}
+
+#pr-bigbox:hover>#pr-h3{color: #D6A04C;
+transition: 0.5s;}
 
 
 /*--------vv Why us vv--------*/
@@ -461,7 +582,7 @@ margin-top: 3%;}
 font-family: "Questrial",sans-serif;
 font-size: 14px;}
 
-h3{color: #FFFFFF;
+.panel-h3{color: #FFFFFF;
 font-weight: 400;
 font-family: "Cabin",sans-serif;
 font-size: 32px;
@@ -474,13 +595,116 @@ font-family: "Questrial",sans-serif;
 font-size: 14px;
 margin-bottom: 15px;}
 
+.panel:hover{
+    background-color: #272727;
+    transition: 0.5s;}
+
+.panel:hover .panel-h3{
+    color: #D6A04C;
+transition: 0.5s;}
 
 
-
-/*--------vv Footer vv--------*/
+/*--------vv Footer Top vv--------*/
 footer{width: 100%;
-height: 50vh;
-background-color: #212529;
+height: 57vh;
+background-color: #1e1e1e;
 }
+
+#ft-top{height: 45.5vh;}
+
+#fttp-div{position: absolute;
+left: 15.5%;
+bottom: -515%;}
+
+#list1{position: absolute;
+left: 27%;
+bottom: -532%;
+width: 20%;}
+
+#list2{position: absolute;
+left: 39%;
+bottom: -528%;
+width: 20%;}
+
+
+
+.list{
+width: 50%;
+list-style-type: none;}
+
+
+.ft-h4{font-family: "Cabin",sans-serif;
+font-size: 20px;
+color: #FFFFFF;
+font-weight: 600;
+margin-bottom: 30px;
+width: 50%;
+}
+
+.ft-a-list{
+    text-decoration: 0;
+    color: #E9E3D9;
+    font-family: "Questrial",sans-serif;
+    font-size: 16px;
+}
+
+.ft-a-list:hover{text-decoration:underline;
+color: #FFFFFF;}
+
+li{margin-bottom: 20px;}
+
+/*--------vv Newsletter vv--------*/
+
+#newsletter{position: absolute;
+left: 63%;
+bottom: -525%;}
+
+#news-p{font-family: "Questrial",sans-serif;
+font-size: 16px;
+color: #a4a6ae;
+margin-bottom: 15px;}
+
+#news-email{padding: 10px 20px;
+background: #FFFFFF;
+border: 0;
+border-radius: 6%;
+color: #5C6168;
+width: 130%;
+height: 60px;
+font-family: "Questrial",sans-serif;
+font-size: 16px;}
+
+#news-buttom{padding: 21px 30px;
+border: 0;
+border-radius: 0 3px 3px 0;
+background-color: #D6A04C;
+height: 60px;
+width: 80px;
+position: absolute;
+left: 125%;
+top: 58.5%;}
+
+/*--------vv Footer Bottom vv--------*/
+
+#ft-bottom{height: 8.5vh;}
+
+#ftbt-div{
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 39px;
+    padding-bottom: 1px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+#ftbt-p{font-family: "Questrial",sans-serif;
+font-size: 16px;
+color: #a4a6ae;
+display: inline-block;
+margin-left: 30%;}
+
+#ftbt-a{text-decoration: 0;
+color: #D6A04C;
+font-family: "Questrial",sans-serif;
+font-size: 16px;}
 
 /*----------------------------*/
