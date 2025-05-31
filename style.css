@@ -3,7 +3,7 @@ padding: 0;
 box-sizing: border-box;
 scroll-behavior: smooth ;}
 
-/*--------vv Inicial vv--------*/
+/*--------vv Start vv--------*/
 header{background-image: url(h1_hero1.jpg);
 background-color:rgb(0, 0, 0, 0.45);
 background-blend-mode: multiply;
