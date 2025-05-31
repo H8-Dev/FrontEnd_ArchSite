@@ -97,7 +97,8 @@ right: -45px;
 height: 100%;
 width: 100%;
 z-index: 50;
-opacity: 0%;}
+opacity: 0%;
+cursor: pointer;}
 
 #check1:checked+aside{
     position: fixed;
@@ -115,14 +116,30 @@ right: -335%;
 top: 0%;
 z-index: -2;
 padding: 140px 50px 10px 59px;
-    transition: 1s}
+transition: 1s}
 
-#menu2{height: 3%;
-width: 5%;}
+#menu2{height: 33px;
+width: 33.5px;
+background: none;
+position: absolute;
+left: 34px;
+top: 50px;
+border: 0;}
 
-#check2{display: inline-block;
+#check2{
 width: 100%;
-height: 100%;}
+height: 100%;
+opacity: 0%;
+cursor: pointer;
+position: absolute;
+right: 0;
+}
+
+#xmark{fill: #E9E3D9;
+width: 75%;}
+
+#menu2:hover>#xmark{fill: #D6A04C;
+transition: 0.5s;}
 
 #menu-list{list-style-type: none;
     text-align: center;
@@ -476,6 +493,26 @@ padding-left: 5%;}
 #pr-bigbox:hover>#pr-h3{color: #D6A04C;
 transition: 0.5s;}
 
+#pr-bigbox:hover #pr-btn{background-color: #D6A04C;
+transition: 0.5s;}
+
+#pr-btn{fill: #FFFFFF;
+background: rgba(255, 255, 255, 0.1);
+border: 0;
+border-radius: 50%;
+width: 60px;
+height: 60px;
+text-align: center;
+line-height: 65px;
+display: inline-block;
+position: absolute;
+left: 85%;
+top: 35%;}
+
+#pr-btn>svg{height: 16px;
+width: 16px;
+fill: #FFFFFF;}
+
 
 /*--------vv Why us vv--------*/
 
@@ -603,6 +640,47 @@ margin-bottom: 15px;}
     color: #D6A04C;
 transition: 0.5s;}
 
+.panel:hover #panel-btn1{background-color: #D6A04C;
+transition: 0.5s;}
+
+.panel:hover #panel-btn2{background-color: #D6A04C;
+transition: 0.5s;}
+
+#panel-btn1{fill: #FFFFFF;
+background: rgba(255, 255, 255, 0.1);
+border: 0;
+border-radius: 50%;
+width: 60px;
+height: 60px;
+text-align: center;
+line-height: 65px;
+display: inline-block;
+position: absolute;
+right: 15%;
+bottom: -427%;}
+
+#panel-btn1>svg{height: 16px;
+width: 16px;
+fill: #FFFFFF;}
+
+
+#panel-btn2{fill: #FFFFFF;
+background: rgba(255, 255, 255, 0.1);
+border: 0;
+border-radius: 50%;
+width: 60px;
+height: 60px;
+text-align: center;
+line-height: 65px;
+display: inline-block;
+position: absolute;
+right: 15%;
+bottom: -463%;}
+
+#panel-btn2>svg{height: 16px;
+width: 16px;
+fill: #FFFFFF;}
+
 
 /*--------vv Footer Top vv--------*/
 footer{width: 100%;
@@ -682,7 +760,8 @@ height: 60px;
 width: 80px;
 position: absolute;
 left: 125%;
-top: 58.5%;}
+top: 58.5%;
+cursor: pointer;}
 
 /*--------vv Footer Bottom vv--------*/
 
